@@ -1,17 +1,11 @@
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH
-export PATH=$HOME/bin/erlang_ls/bin:$PATH
-export PATH=$HOME/rebar3:$PATH
-export PATH=$HOME/bin/otp/24/bin:$PATH
-export PATH=$HOME/bin/elixir/bin:$PATH
-export PATH=$HOME/.emacs.d/bin:$PATH
 export PATH=$HOME/bin/go/bin:$PATH
 export PATH=$HOME/bin/nvim-linux64/bin:$PATH
 export PATH=$HOME/bin/bitcoin/bin:$PATH
 export PATH=$HOME/bin/xray:$PATH
-export PATH=$HOME/bin/emacs/bin:$PATH
 export PATH=$HOME/.local/bin:$PATH
-
+export PATH=/home/anthonyjiang/.cache/rebar3/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -116,28 +110,30 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+export NVIM_INIT_FILE="$HOME/Desktop/Workspace/vim/init.lua"
+alias nvim='nvim -u $NVIM_INIT_FILE'
 
 # XClip
 alias pbcopy='xclip -selection clipboard'
 alias pbpaste='xclip -selection clipboard -o'
 
 # svn commmit editor
-export SVN_EDITOR=vim
+export SVN_EDITOR=nvim
 
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-#__conda_setup="$('/home/anthonyjiang/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-#if [ $? -eq 0 ]; then
+# __conda_setup="$('/home/anthonyjiang/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+# if [ $? -eq 0 ]; then
 #    eval "$__conda_setup"
-#else
-#   if [ -f "/home/anthonyjiang/anaconda3/etc/profile.d/conda.sh" ]; then
+# else
+#    if [ -f "/home/anthonyjiang/anaconda3/etc/profile.d/conda.sh" ]; then
 #       . "/home/anthonyjiang/anaconda3/etc/profile.d/conda.sh"
 #   else
 #       export PATH="/home/anthonyjiang/anaconda3/bin:$PATH"
 #   fi
-#fi
-#unset __conda_setup
+# fi
+# unset __conda_setup
 # <<< conda initialize <<<
 
 export HEX_CDN=https://hexpm.upyun.com
@@ -153,3 +149,8 @@ fi
 
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+
+
